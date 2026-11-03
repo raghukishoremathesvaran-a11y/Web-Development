@@ -1,0 +1,198 @@
+/* --- Root Variables for Theme --- */
+:root {
+  --primary-color: #0b1d3a;    /* Dark Blue */
+  --accent-color: #f39c12;     /* Gold / Yellow */
+  --accent-hover: #e67e22;     /* Darker Gold */
+  --bg-color: #f4f7f6;         /* Light Background */
+  --card-bg: #ffffff;          /* White Card Background */
+  --text-color: #333333;       /* Dark Text */
+  --text-light: #ffffff;       /* White Text */
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  --border-radius: 8px;
+}
+
+/* --- Global Styles --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  padding-top: 70px; /* Space for fixed navbar */
+}
+
+/* --- Navigation Bar --- */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: var(--shadow);
+  z-index: 1000;
+}
+
+nav .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--accent-color);
+  letter-spacing: 1px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav ul li a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: var(--accent-color);
+}
+
+/* --- Hero Section / Banner --- */
+.hero {
+  background: linear-gradient(135deg, var(--primary-color), #1b365d);
+  color: var(--text-light);
+  text-align: center;
+  padding: 5rem 2rem;
+  box-shadow: inset 0 0 20px rgba(0,0,0,0.3);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--accent-color);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: var(--shadow);
+}
+
+.btn:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-2px);
+}
+
+/* --- Cards & Containers --- */
+.container {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.card {
+  background-color: var(--card-bg);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  border-left: 5px solid var(--accent-color);
+}
+
+/* --- Tables (Match Schedule) --- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+table th, table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+table th {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  font-weight: 600;
+}
+
+table tr:hover {
+  background-color: #f1f5f9;
+}
+
+/* --- Forms (Booking Section) --- */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+form label {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+form input, form select {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+form input:focus, form select:focus {
+  border-color: var(--accent-color);
+}
+
+/* --- Footer --- */
+footer {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  border-top: 3px solid var(--accent-color);
+}
+
+
+
