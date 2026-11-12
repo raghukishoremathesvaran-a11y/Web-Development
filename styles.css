@@ -1,17 +1,16 @@
-/* --- Root Variables for Theme --- */
+
 :root {
-  --primary-color: #0b1d3a;    /* Dark Blue */
-  --accent-color: #f39c12;     /* Gold / Yellow */
-  --accent-hover: #e67e22;     /* Darker Gold */
-  --bg-color: #f4f7f6;         /* Light Background */
-  --card-bg: #ffffff;          /* White Card Background */
-  --text-color: #333333;       /* Dark Text */
-  --text-light: #ffffff;       /* White Text */
-  --shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  --primary-color: #0b1d3a;
+  --accent-color: #f39c12;
+  --accent-hover: #e67e22;
+  --bg-color: #f4f7f6;
+  --card-bg: #ffffff;
+  --text-color: #333333;
+  --text-light: #ffffff;
+  --shadow: 0 4px 12px rgba(0,0,0,0.15);
   --border-radius: 8px;
 }
 
-/* --- Global Styles --- */
 * {
   margin: 0;
   padding: 0;
@@ -20,19 +19,18 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: var(--bg-color);
+  background: var(--bg-color);
   color: var(--text-color);
   line-height: 1.6;
-  padding-top: 70px; /* Space for fixed navbar */
+  padding-top: 70px;
 }
 
-/* --- Navigation Bar --- */
 nav {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: var(--primary-color);
+  background: var(--primary-color);
   color: var(--text-light);
   display: flex;
   justify-content: space-between;
@@ -66,7 +64,6 @@ nav ul li a:hover {
   color: var(--accent-color);
 }
 
-/* --- Hero Section / Banner --- */
 .hero {
   background: linear-gradient(135deg, var(--primary-color), #1b365d);
   color: var(--text-light);
@@ -83,15 +80,13 @@ nav ul li a:hover {
 
 .hero p {
   font-size: 1.2rem;
-  margin-bottom: 2rem;
   max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto 2rem;
 }
 
 .btn {
   display: inline-block;
-  background-color: var(--accent-color);
+  background: var(--accent-color);
   color: var(--primary-color);
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
@@ -105,11 +100,10 @@ nav ul li a:hover {
 }
 
 .btn:hover {
-  background-color: var(--accent-hover);
+  background: var(--accent-hover);
   transform: translateY(-2px);
 }
 
-/* --- Cards & Containers --- */
 .container {
   max-width: 1100px;
   margin: 2rem auto;
@@ -117,7 +111,7 @@ nav ul li a:hover {
 }
 
 .card {
-  background-color: var(--card-bg);
+  background: var(--card-bg);
   padding: 2rem;
   margin-bottom: 2rem;
   border-radius: var(--border-radius);
@@ -125,12 +119,11 @@ nav ul li a:hover {
   border-left: 5px solid var(--accent-color);
 }
 
-/* --- Tables (Match Schedule) --- */
 table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 1rem;
-  background-color: var(--card-bg);
+  background: var(--card-bg);
   border-radius: var(--border-radius);
   overflow: hidden;
   box-shadow: var(--shadow);
@@ -143,16 +136,15 @@ table th, table td {
 }
 
 table th {
-  background-color: var(--primary-color);
+  background: var(--primary-color);
   color: var(--text-light);
   font-weight: 600;
 }
 
 table tr:hover {
-  background-color: #f1f5f9;
+  background: #f1f5f9;
 }
 
-/* --- Forms (Booking Section) --- */
 form {
   display: flex;
   flex-direction: column;
@@ -183,9 +175,8 @@ form input:focus, form select:focus {
   border-color: var(--accent-color);
 }
 
-/* --- Footer --- */
 footer {
-  background-color: var(--primary-color);
+  background: var(--primary-color);
   color: var(--text-light);
   text-align: center;
   padding: 1.5rem;
@@ -194,5 +185,62 @@ footer {
   border-top: 3px solid var(--accent-color);
 }
 
+/* Booking Form */
+#booking form {
+  max-width: 500px;
+  margin: auto;
+  padding: 25px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px #ccc;
+}
 
+.form-group {
+  margin-bottom: 15px;
+}
 
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.form-group input:not([type="radio"]),
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: 2px solid var(--accent-color);
+}
+
+#booking button {
+  background: var(--primary-color);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#booking button:hover {
+  background: var(--accent-color);
+  color: var(--primary-color);
+}
+
+/* Radio Buttons */
+.form-group:has(input[type="radio"]) {
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.form-group input[type="radio"] {
+  width: auto;
+  margin: 0;
+}

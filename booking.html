@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IPL Ticket Booking</title>
+</head>
+<body>
+    <h2>IPL Ticket Booking Form</h2>
+
+    <form>
+        <label>Name:</label>
+        <input type="text" name="name" required minlength="3" maxlength="30"><br><br>
+
+        <label>Email:</label>
+        <input type="email" name="email" required><br><br>
+
+        <label>Phone:</label>
+        <input type="tel" name="phone" required minlength="10" maxlength="10"><br><br>
+
+        <label>Match:</label>
+        <select name="match" required>
+            <option value="">Select Match</option>
+            <option>RCB vs CSK</option>
+            <option>MI vs KKR</option>
+            <option>SRH vs RR</option>
+        </select><br><br>
+
+        <label>Stand:</label>
+        <select name="stand" required>
+            <option value="">Select Stand</option>
+            <option>General</option>
+            <option>Premium</option>
+            <option>VIP</option>
+        </select><br><br>
+
+        <label>Tickets:</label>
+        <input type="number" name="tickets" min="1" max="10" required><br><br>
+
+        <label>Preference:</label>
+        <input type="radio" name="preference" value="Online"> Online
+        <input type="radio" name="preference" value="Offline"> Offline<br><br>
+
+        <button type="submit">Book Tickets</button>
+        <button type="reset">Reset</button>
+    </form>
+</body>
+</html>
